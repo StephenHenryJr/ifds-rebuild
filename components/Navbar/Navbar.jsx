@@ -24,11 +24,12 @@ const Navbar = () => {
             className="group relative text-white cursor-pointer px-6 h-full flex flex-col items-center justify-center"
             key={link.title}
           >
-            <div className="group-hover:bg-white w-2 h-2 rounded-full mb-2" />
-            {link.title}
-
+            <div className="flex-col flex items-center">
+              <div className="group-hover:bg-white w-2 h-2 rounded-full mb-2" />
+              {link.title}
+            </div>
             {link.links && (
-              <div className="group-hover:block hidden bg-sky-800 absolute w-max top-[91px] p-4 border-t-4 rounded-b-md">
+              <div className="group-hover:block hidden bg-sky-800 absolute w-max top-[91px] border-t-4 p-4 rounded-b-md z-0">
                 {link.links.map((item) => (
                   <li key={item} className="my-1 hover:text-gray-300">
                     {item.title}
@@ -53,8 +54,8 @@ const Navbar = () => {
       </div>
 
       {/* MENU ICON */}
-      <div className="absolute left-10">
-        <BiMenu className="text-white cursor-pointer" size={35}/>
+      <div className="absolute left-10 2xl:hidden">
+        <BiMenu className="text-white cursor-pointer" size={35} />
       </div>
     </div>
   );

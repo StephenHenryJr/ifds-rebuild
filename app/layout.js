@@ -1,5 +1,6 @@
 import { Navbar } from "@/components";
 import "./globals.css";
+import { ContextProvider } from "@/contexts/ContextProvider";
 
 export const metadata = {
   title: "International Financial Data Services",
@@ -9,10 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative">
-        <Navbar/>
-        {children}
-      </body>
+      <ContextProvider>
+        <body className="relative">
+          <Navbar />
+          {children}
+        </body>
+      </ContextProvider>
     </html>
   );
 }
