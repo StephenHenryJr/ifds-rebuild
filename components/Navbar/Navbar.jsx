@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="2xl:flex hidden h-full">
         {navigationLinks.map((link) => (
           <div
-            className="group relative text-white cursor-pointer px-6 h-full flex flex-col items-center justify-center"
+            className="group text-white cursor-pointer px-6 h-full flex flex-col justify-center relative"
             key={link.title}
           >
             <div className="flex-col flex items-center">
@@ -29,7 +29,7 @@ const Navbar = () => {
               {link.title}
             </div>
             {link.links && (
-              <div className="group-hover:block hidden bg-sky-800 absolute w-max top-[91px] border-t-4 p-4 rounded-b-md z-0">
+              <div className="group-hover:block hidden bg-sky-800 w-max p-4 rounded-b-md / absolute top-full left-0 / border-t-4 border-white">
                 {link.links.map((item) => (
                   <li key={item} className="my-1 hover:text-gray-300">
                     {item.title}
