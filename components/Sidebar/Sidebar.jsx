@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import './Sidebar.scss'
 
 import { BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { BiSolidDownArrow } from "react-icons/bi";
+
 
 import { navigationLinks } from "@/constants";
 
@@ -21,26 +24,42 @@ const Sidebar = () => {
             alt="IFDS Logo"
           />
         </Link>
-        <AiFillCloseCircle className="text-white cursor-pointer" size={20} />
+        <AiFillCloseCircle className="text-white cursor-pointer" size={25} />
       </div>
 
       {/* LINKS */}
       <div className="mt-8">
         {navigationLinks.map((link) => (
           <div key={link.title} className="group my-4">
-            <h1 className="text-white">{link.title}</h1>
-        {link.links && (
-            <div className="bg-white p-2 my-2 rounded / hidden group-hover:block">
-            {link.links.map((item) => (
-              <li key={item} className="my-1 hover:text-gray-300">
-                Test
-              </li>
-            ))}
-          </div>
-        )}
+            <div className="flex items-center justify-between">
+              <h1 className="text-white mr-4">{link.title}</h1>
+              {link.links && <BiSolidDownArrow color="white" />}
+            </div>
+            {link.links && (
+              <div className="dropdown p-2 my-2 rounded / hidden group-hover:block">
+                {link.links.map((item) => (
+                  <li key={item} className="my-1 text-white text-sm cursor-pointer">
+                    {item.title}
+                  </li>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
+
+      {/* SEARCH FORM    */}
+      <div className="flex mt-6 items-center bg-white p-2 rounded">
+        <BsSearch className="mr-2" />
+        <form action="">
+          <input
+            className="focus:outline-none"
+            type="text"
+            placeholder="Search"
+          />
+        </form>
+      </div>
+
     </div>
   );
 };
