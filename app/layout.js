@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { Navbar, Sidebar } from "@/components";
 import "./globals.css";
 import { ContextProvider } from "@/contexts/ContextProvider";
 
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <ContextProvider>
         <body className="relative">
           <Navbar />
+          <Sidebar />
           {children}
         </body>
       </ContextProvider>
