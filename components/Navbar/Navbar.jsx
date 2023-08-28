@@ -17,6 +17,12 @@ const Navbar = () => {
 
   return (
     <div className="bg-sky-800 px-32 h-24 flex justify-around items-center">
+
+      {/* MENU ICON */}
+      <div className="absolute left-10 2xl:hidden">
+        <BiMenu className="text-white cursor-pointer" size={35} onClick={handleSideBar} />
+      </div>
+      
       {/* LOGO  */}
       <Link href={"/"}>
         <Image src="/ifds-logo.webp" width={300} height={300} alt="IFDS Logo" />
@@ -57,10 +63,10 @@ const Navbar = () => {
           />
         </form>
       </div>
-
-      {/* MENU ICON */}
-      <div className="absolute left-10 2xl:hidden">
-        <BiMenu className="text-white cursor-pointer" size={35} onClick={handleSideBar} />
+      
+      {/* CLIENT LOGIN */}
+      <div className="hover:text-gray-300 text-white cursor-pointer absolute right-4 top-2">
+          <a href="https://ifdsgroup.service-now.com/IFDS_Portal/">Client Login</a>
       </div>
 
       {/* SIDE BAR */}

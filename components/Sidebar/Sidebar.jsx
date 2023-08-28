@@ -14,7 +14,7 @@ import { useStateContext } from "@/contexts/ContextProvider";
 
 const Sidebar = () => {
 
-  const { viewSidebar, handleSideBar } = useStateContext();
+  const { handleSideBar, viewDropdown, handleDropdown } = useStateContext();
 
   return (
     <div className="bg-sky-800 w-96 h-screen p-4 / fixed top-0 left-0">
@@ -35,12 +35,12 @@ const Sidebar = () => {
       <div className="mt-8">
         {navigationLinks.map((link) => (
           <div key={link.title} className="group my-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between" onClick={handleDropdown}>
               <h1 className="text-white mr-4 cursor-pointer">{link.title}</h1>
               {link.links && <BiSolidDownArrow color="white" className="cursor-pointer"/>}
             </div>
-            {link.links && (
-              <div className="dropdown p-2 rounded / ">
+            {link.links && viewDropdown && (
+              <div className="p-2 rounded / ">
                 {link.links.map((item) => (
                   <li key={item} className="p-2 text-white text-sm cursor-pointer rounded / hover:bg-white hover:text-sky-800">
                     {item.title}
@@ -62,6 +62,11 @@ const Sidebar = () => {
             placeholder="Search"
           />
         </form>
+      </div>
+
+      {/* CLIENT LOGIN */}
+      <div className="hover:text-gray-300 text-white cursor-pointer absolute left-4 bottom-2">
+          <a href="https://ifdsgroup.service-now.com/IFDS_Portal/">Client Login</a>
       </div>
 
     </div>

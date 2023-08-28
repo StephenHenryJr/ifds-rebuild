@@ -6,22 +6,23 @@ const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [viewSidebar, setViewSidebar] = useState(false)
-  const [isClicked, setIsClicked] = useState(false);
+  const [viewDropdown, setViewDropdown] = useState(false);
 
   const handleSideBar = () => {
     setViewSidebar(!viewSidebar);
   };
 
-  const handleClick = () => {
-    setIsClicked(!isClicked);
+  const handleDropdown = () => {
+    setViewDropdown(!viewDropdown);
   };
 
   return (
     <StateContext.Provider
       value={{ 
         viewSidebar, setViewSidebar,
-        isClicked, setIsClicked,
-        handleClick,handleSideBar,
+        handleSideBar,
+        viewDropdown, setViewDropdown,
+        handleDropdown,
       }}
     >
       {children}
