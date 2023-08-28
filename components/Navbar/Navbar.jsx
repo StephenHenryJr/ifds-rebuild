@@ -29,9 +29,9 @@ const Navbar = () => {
               {link.title}
             </div>
             {link.links && (
-              <div className="group-hover:block hidden bg-sky-800 w-max p-4 rounded-b-md / absolute top-full left-0 / border-t-4 border-transparent group-hover:border-white transition-all duration-300">
+              <div className="group-hover:block hidden bg-sky-800 w-max p-2 rounded-b-md / absolute top-full left-0 / border-t-4 border-transparent group-hover:border-white transition-all duration-300">
                 {link.links.map((item) => (
-                  <li key={item} className="my-1 hover:text-gray-300">
+                  <li key={item} className="p-2 text-sm rounded / hover:bg-white hover:text-sky-800">
                     {item.title}
                   </li>
                 ))}

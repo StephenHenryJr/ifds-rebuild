@@ -27,9 +27,9 @@ export const navigationLinks = [
   {
     title: "CONTACT US",
     links: [
-      { title: "CANADA", url: "/" },
-      { title: "IRELAND", url: "/" },
-      { title: "LUXEMBOURG", url: "/" },
+      { title: "Canada", url: "/" },
+      { title: "Ireland", url: "/" },
+      { title: "Luxembourg", url: "/" },
     ],
   },
 ];
