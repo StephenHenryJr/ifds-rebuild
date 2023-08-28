@@ -43,7 +43,7 @@ const Sidebar = () => {
             {link.links && dropdownStates[link.title]  && (
               <div className="p-2 rounded / ">
                 {link.links.map((item) => (
-                  <li key={item} className="p-2 text-white text-sm cursor-pointer rounded / hover:bg-white hover:text-sky-800">
+                  <li key={item} className="p-2 text-white text-sm cursor-pointer rounded / hover:bg-white hover:text-sky-800 transition-all ease-in-out">
                     {item.title}
                   </li>
                 ))}

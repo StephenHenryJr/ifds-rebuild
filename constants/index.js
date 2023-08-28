@@ -33,3 +33,28 @@ export const navigationLinks = [
     ],
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "LEGAL",
+    links: [
+      { title: "Affiliates", url: "/" },
+      { title: "Cookies & Privacy Policy", url: "/" },
+      { title: "Important Information", url: "/" },
+      { title: "Accessibility", url: "/" },
+    ],
+  },
+  {
+    title: "CONNECT WITH US",
+    links: [
+      { title: "Instagram", url: "/", src:'../public/linkedin.png' },
+      { title: "Twitter", url: "/", src:'../public/twitter.png' },
+    ],
+  },
+  {
+    title: "CAREERS",
+    links: [
+      { title: "Envision yourself at IFDS", url: "/" },
+    ],
+  },
+]
