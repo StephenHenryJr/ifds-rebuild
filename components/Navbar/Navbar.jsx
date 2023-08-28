@@ -1,15 +1,20 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Sidebar } from "@/components";
 
 import { BsSearch } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 
 import { navigationLinks } from "@/constants";
+import { useStateContext } from "@/contexts/ContextProvider";
 
 const Navbar = () => {
+
+  const { viewSidebar, handleSideBar } = useStateContext();
+
   return (
     <div className="bg-sky-800 px-32 h-24 flex justify-around items-center">
       {/* LOGO  */}
@@ -55,8 +60,11 @@ const Navbar = () => {
 
       {/* MENU ICON */}
       <div className="absolute left-10 2xl:hidden">
-        <BiMenu className="text-white cursor-pointer" size={35} />
+        <BiMenu className="text-white cursor-pointer" size={35} onClick={handleSideBar} />
       </div>
+
+      {/* SIDE BAR */}
+      {viewSidebar && <Sidebar />}
     </div>
   );
 };

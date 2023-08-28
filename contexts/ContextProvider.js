@@ -5,22 +5,21 @@ const StateContext = createContext();
 
 
 export const ContextProvider = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState(false); 
   const [viewSidebar, setViewSidebar] = useState(false)
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClick = () => {
+  const handleSideBar = () => {
     setViewSidebar(!viewSidebar);
   };
 
-  const handleSideBar = () => {
+  const handleClick = () => {
     setIsClicked(!isClicked);
   };
 
   return (
     <StateContext.Provider
       value={{ 
-        activeMenu,  setActiveMenu, 
+        viewSidebar, setViewSidebar,
         isClicked, setIsClicked,
         handleClick,handleSideBar,
       }}

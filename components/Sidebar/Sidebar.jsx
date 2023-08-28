@@ -10,10 +10,12 @@ import { BiSolidDownArrow } from "react-icons/bi";
 
 
 import { navigationLinks } from "@/constants";
+import { useStateContext } from "@/contexts/ContextProvider";
 
 const Sidebar = () => {
 
-  
+  const { viewSidebar, handleSideBar } = useStateContext();
+
   return (
     <div className="bg-sky-800 w-96 h-screen p-4 / fixed top-0 left-0">
       {/* LOGO  AND CLOSE BUTTON */}
@@ -26,7 +28,7 @@ const Sidebar = () => {
             alt="IFDS Logo"
           />
         </Link>
-        <AiFillCloseCircle className="text-white cursor-pointer" size={25} />
+        <AiFillCloseCircle className="text-white cursor-pointer" size={25} onClick={handleSideBar}/>
       </div>
 
       {/* LINKS */}
