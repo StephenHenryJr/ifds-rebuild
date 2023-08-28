@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { TbSquareRoundedChevronUpFilled } from "react-icons/tb";
+
 import { footerLinks } from "@/constants";
 
 const Footer = () => {
@@ -14,14 +16,24 @@ const Footer = () => {
             <h1 className="mb-4 tracking-wider underline underline-offset-8">
               {link.title}
             </h1>
-            {link.links.map((item) => (
-              <li key={item.title} className="my-2 text-base cursor-pointer">
-                {item.title}
-                {item.src && (
-                    <Image src={item.src} width={25} height={25} alt="Social Media Icon"/>
-                )}
-              </li>
-            ))}
+
+            <ul className="my-2 text-base">
+              {link.links.map((item) => (
+                <li
+                  key={item.title}
+                  className={`cursor-pointer mb-4 ${
+                    item.src ? "inline-flex items-center space-x-2" : ""
+                  }`}
+                >
+                  {item.src && (
+                    <a href={item.url}>
+                        <Image src={item.src} width={25} height={25} alt="Social Media Icon" />
+                    </a>
+                  )}
+                  <span>{item.title}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
@@ -38,6 +50,11 @@ const Footer = () => {
         179786. | International Financial Data Services (Luxembourg) SA. R C S
         Luxembourg B81997
       </p>
+
+      <div className="flex flex-col items-center mt-6">
+        <TbSquareRoundedChevronUpFilled color="white" size={25}/>
+        <h1 className="text-white text-base cursor-pointer mt-1">Scroll to top</h1>
+      </div>
     </div>
   );
 };

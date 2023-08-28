@@ -47,8 +47,8 @@ export const footerLinks = [
   {
     title: "CONNECT WITH US",
     links: [
-      { title: "", url: "/", src:'/linkedin.png' },
-      { title: "", url: "/", src:'/twitter.png' },
+      { title: "", url: "https://www.linkedin.com/company/international-financial-data-services-canada/mycompany/verification/", src:'/linkedin.png' },
+      { title: "", url: "https://twitter.com/ifdsgroup", src:'/twitter.png' },
     ],
   },
   {
