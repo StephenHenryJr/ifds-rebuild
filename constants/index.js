@@ -47,8 +47,8 @@ export const footerLinks = [
   {
     title: "CONNECT WITH US",
     links: [
-      { title: "Instagram", url: "/", src:'../public/linkedin.png' },
-      { title: "Twitter", url: "/", src:'../public/twitter.png' },
+      { title: "", url: "/", src:'/linkedin.png' },
+      { title: "", url: "/", src:'/twitter.png' },
     ],
   },
   {
