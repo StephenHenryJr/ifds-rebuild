@@ -14,7 +14,8 @@ import { useStateContext } from "@/contexts/ContextProvider";
 
 const Sidebar = () => {
 
-  const { handleSideBar, viewDropdown, handleDropdown } = useStateContext();
+  const { handleSideBar, dropdownStates, handleDropdown } = useStateContext();
+  ;
 
   return (
     <div className="bg-sky-800 w-96 h-screen p-4 / fixed top-0 left-0">
@@ -35,11 +36,11 @@ const Sidebar = () => {
       <div className="mt-8">
         {navigationLinks.map((link) => (
           <div key={link.title} className="group my-4">
-            <div className="flex items-center justify-between" onClick={handleDropdown}>
+            <div className="flex items-center justify-between" onClick={() => handleDropdown(link.title)}>
               <h1 className="text-white mr-4 cursor-pointer">{link.title}</h1>
               {link.links && <BiSolidDownArrow color="white" className="cursor-pointer"/>}
             </div>
-            {link.links && viewDropdown && (
+            {link.links && dropdownStates[link.title]  && (
               <div className="p-2 rounded / ">
                 {link.links.map((item) => (
                   <li key={item} className="p-2 text-white text-sm cursor-pointer rounded / hover:bg-white hover:text-sky-800">
