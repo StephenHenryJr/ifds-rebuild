@@ -16,7 +16,7 @@ const Navbar = () => {
   const { viewSidebar, handleSideBar } = useStateContext();
 
   return (
-    <div className="bg-sky-800 px-32 h-24 flex justify-around items-center">
+    <div className="bg-sky-800 px-48 py-14 h-24 flex 2xl:justify-between justify-center items-center">
 
       {/* MENU ICON */}
       <div className="absolute left-10 2xl:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
       </div>
       
       {/* CLIENT LOGIN */}
-      <div className="hover:text-gray-300 text-white cursor-pointer absolute right-4 top-2">
+      <div className="hover:text-gray-300 text-white cursor-pointer absolute right-8 top-2">
           <a href="https://ifdsgroup.service-now.com/IFDS_Portal/">Client Login</a>
       </div>
 

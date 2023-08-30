@@ -9,8 +9,8 @@ import { footerLinks } from "@/constants";
 
 const Footer = () => {
   return (
-    <div className="w-full p-10 text-xl bg-sky-800 fixed bottom-0">
-      <div className="flex justify-between text-white w-9/12 m-auto">
+    <div className="w-full text-xl bg-sky-800 2xl:px-48 p-12  py-12">
+      <div className="2xl:flex flex-wrap justify-between text-white m-auto">
         {footerLinks.map((link) => (
           <div key={link.title}>
             <h1 className="mb-4 tracking-wider underline underline-offset-8">
@@ -21,9 +21,7 @@ const Footer = () => {
               {link.links.map((item) => (
                 <li
                   key={item.title}
-                  className={`cursor-pointer mb-4 ${
-                    item.src ? "inline-flex items-center space-x-2" : ""
-                  }`}
+                  className={`cursor-pointer mb-4 ${item.src ? "inline-flex items-center space-x-2" : ""}`}
                 >
                   {item.src && (
                     <a href={item.url}>
@@ -37,7 +35,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <p className="text-white text-sm w-9/12 m-auto mt-8">
+      <p className="text-white text-sm m-auto mt-8 tracking-wide">
         Copyright © International Financial Data Services Ltd. All rights
         reserved. IFDS and the International Financial Data Services logo IFDS
         logo are registered trademarks of International Financial Data Services
@@ -51,9 +49,9 @@ const Footer = () => {
         Luxembourg B81997
       </p>
 
-      <div className="flex flex-col items-center mt-6">
+      <div className="flex flex-col items-center mt-6  cursor-pointer">
         <TbSquareRoundedChevronUpFilled color="white" size={25}/>
-        <h1 className="text-white text-base cursor-pointer mt-1">Scroll to top</h1>
+        <h1 className="text-white text-base mt-1">Scroll to top</h1>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const Sidebar = () => {
   ;
 
   return (
-    <div className="bg-sky-800 w-96 h-screen p-4 / fixed top-0 left-0">
+    <div className="bg-sky-800 w-96 h-screen p-4 z-40 / fixed top-0 left-0">
       {/* LOGO  AND CLOSE BUTTON */}
       <div className="flex justify-between ">
         <Link href={"/"}>
