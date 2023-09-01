@@ -6,6 +6,7 @@ import Link from "next/link";
 import { TbSquareRoundedChevronUpFilled } from "react-icons/tb";
 
 import { footerLinks } from "@/constants";
+import './Footer.scss'
 
 const Footer = () => {
   return (

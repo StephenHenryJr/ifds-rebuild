@@ -1,8 +1,8 @@
 "use client";
+import './Sidebar.scss'
 
 import Image from "next/image";
 import Link from "next/link";
-import './Sidebar.scss'
 
 import { BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";

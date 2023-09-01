@@ -1,4 +1,6 @@
 "use client";
+import './Navbar.scss'
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +18,7 @@ const Navbar = () => {
   const { viewSidebar, handleSideBar } = useStateContext();
 
   return (
-    <div className="bg-sky-800 px-48 py-14 h-24 flex 2xl:justify-between justify-center items-center">
+    <div className="bg-sky-800 px-48 h-24 flex 2xl:justify-between justify-center items-center">
 
       {/* MENU ICON */}
       <div className="absolute left-10 2xl:hidden">
@@ -40,9 +42,9 @@ const Navbar = () => {
               {link.title}
             </div>
             {link.links && (
-              <div className="group-hover:block hidden bg-sky-800 w-max p-2 rounded-b-md / absolute top-full left-0 / border-t-4 border-transparent group-hover:border-white transition-all duration-300">
+              <div className="group-hover:block hidden bg-sky-800 w-max p-2 rounded-b-md / absolute top-full left-0 / border-t-4 border-transparent group-hover:border-white transition-all duration-300 z-40">
                 {link.links.map((item) => (
-                  <li key={item} className="p-2 text-sm rounded / hover:bg-white hover:text-sky-800">
+                  <li key={item} className="p-2 text-md rounded / hover:bg-white hover:text-sky-800">
                     {item.title}
                   </li>
                 ))}
