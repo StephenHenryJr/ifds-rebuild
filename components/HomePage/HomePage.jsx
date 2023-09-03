@@ -11,24 +11,29 @@ const HomePage = () => {
   return (
     <div>
       {/* HERO IMAGE */}
-      <div className="h-[600px] w-full relative">
-        <Image
-          src="/homepage.webp"
-          layout="fill"
-          objectFit="cover"
-          alt="Man Looking outside office window"
-        />
-        <div className="absolute text-white / 2xl:left-48 left-12 top-56">
-          <h1 className="text-5xl font-bold tracking-wider">
-            Global Perspective
+      <div className="h-screen w-full relative px-12 / flex flex-col items-center justify-evenly / lg:flex-row 2xl:p-48">
+        <div className="text-sky-800 xl:w-1/2">
+          <h1 className="text-6xl font-bold tracking-wider">
+            Unlocking Financial Potential Worldwide
           </h1>
-          <h2 className="text-2xl my-5">LOCAL KNOWLEDGE</h2>
+          <h2 className="text-4xl my-5">
+            Your Trusted Partner for Global Financial Solutions
+          </h2>
           <div className="flex items-center cursor-pointer">
-            <span className="text-xl mr-2 ">Learn More</span>
+            <span className="text-xl mr-2 ">Explore Our Expertise</span>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <BsFillArrowRightSquareFill size={20} />
             </motion.div>
           </div>
+        </div>
+        <div className="image w-1/2 flex justify-center">
+          <Image
+            src="/hero-head.png"
+            width={500}
+            height={500}
+            // layout="responsive"
+            alt="Man Looking outside office window"
+          />
         </div>
       </div>
 
@@ -61,12 +66,12 @@ const HomePage = () => {
 
       {/* SLIDING DIV'S */}
       <motion.div
-        className="2xl:px-48 px-12 pb-12 flex justify-between gap-4"
+        className="2xl:px-48 px-12 pb-12 / xl:flex  gap-4"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="w-1/3 h-64 bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer">
+        <div className="2xl:w-1/3 w-full h-full bg-gray-50 text-gray-600 rounded-lg p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
           <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
             <h1 className="text-2xl mr-2">IFDS CANADA</h1>
             <Image
@@ -81,7 +86,7 @@ const HomePage = () => {
             range of record keeping and transfer agency solutions.
           </p>
         </div>
-        <div className="w-1/3 h-64 bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer">
+        <div className="2xl:w-1/3 w-full h-max bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
           <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
             <h1 className="text-2xl mr-2">IFDS IRELAND</h1>
             <Image
@@ -96,7 +101,7 @@ const HomePage = () => {
             maximise their business performance.
           </p>
         </div>
-        <div className="w-1/3 h-64 bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer">
+        <div className="2xl:w-1/3 w-full h-max bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
           <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
             <h1 className="text-2xl mr-2">IFDS LUXEMBOURG</h1>
             <Image
