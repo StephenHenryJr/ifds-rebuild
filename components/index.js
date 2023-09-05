@@ -3,6 +3,8 @@ import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
 import HomePage from "./HomePage/HomePage";
 import Statistics from "./Statistics/Statistics";
+import Card from "./Card/Card";
+import CountryCard from "./CountryCard/CountryCard";
 
 
 export { 
@@ -11,4 +13,6 @@ export {
     Footer,
     HomePage,
     Statistics,
+    Card,
+    CountryCard,
 };

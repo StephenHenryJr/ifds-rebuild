@@ -1,8 +1,8 @@
 "use client";
 
 import "./HomePage.scss";
-import { Statistics } from "..";
- 
+import { Statistics, Card, CountryCard } from "..";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -28,7 +28,10 @@ const HomePage = () => {
               </motion.div>
             </div>
           </div>
-          <div className="hero image w-1/2 flex justify-center" style={{ maxWidth: '100%', width: '500px' }}>
+          <div
+            className="hero image w-1/2 flex justify-center"
+            style={{ maxWidth: "100%", width: "500px" }}
+          >
             <Image
               src="/hero-head.png"
               width={500}
@@ -38,17 +41,17 @@ const HomePage = () => {
             />
           </div>
         </div>
-        
-        <motion.div 
-        className="w-full h-fit p-12 m-4 uppercase / flex justify-between / 2xl:px-64 lg:m-0"
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+
+        <motion.div
+          className="w-full h-fit p-12 m-4 uppercase / flex justify-between / 2xl:px-64 lg:m-0"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
-          <Statistics number='1,700+' stat='Staff and partners worldwide'/>
-          <Statistics number='25%' stat='Staff has 10+ year tenure'/>
-          <Statistics number='18.3M' stat='Active Fund Accounts'/>
+          <Statistics number="1,700+" stat="Staff and partners worldwide" />
+          <Statistics number="25%" stat="Staff has 10+ year tenure" />
+          <Statistics number="18.3M" stat="Active Fund Accounts" />
         </motion.div>
       </div>
 
@@ -87,51 +90,7 @@ const HomePage = () => {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="2xl:w-1/3 w-full h-full bg-gray-50 text-gray-600 rounded-lg p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
-          <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
-            <h1 className="text-2xl mr-2">IFDS CANADA</h1>
-            <Image
-              src="/canada.png"
-              width={30}
-              height={30}
-              alt="country flag"
-            />
-          </div>
-          <p className="text-lg">
-            We support the world’s largest financial institutions with our full
-            range of record keeping and transfer agency solutions.
-          </p>
-        </div>
-        <div className="2xl:w-1/3 w-full h-max bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
-          <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
-            <h1 className="text-2xl mr-2">IFDS IRELAND</h1>
-            <Image
-              src="/ireland.png"
-              width={30}
-              height={30}
-              alt="country flag"
-            />
-          </div>
-          <p className="text-lg">
-            We help asset managers, platform providers and insurance companies
-            maximise their business performance.
-          </p>
-        </div>
-        <div className="2xl:w-1/3 w-full h-max bg-gray-50 text-gray-600 rounded p-12 shadow-lg shadow-gray-500 cursor-pointer mb-4">
-          <div className="flex items-center pb-2 mb-4 border-b-2 border-gray-300">
-            <h1 className="text-2xl mr-2">IFDS LUXEMBOURG</h1>
-            <Image
-              src="/luxembourg.png"
-              width={30}
-              height={30}
-              alt="country flag"
-            />
-          </div>
-          <p className="text-lg">
-            We provide distribution support and administrative capabilities to
-            fund managers across Europe and beyond.
-          </p>
-        </div>
+        <CountryCard />
       </motion.div>
     </div>
   );
