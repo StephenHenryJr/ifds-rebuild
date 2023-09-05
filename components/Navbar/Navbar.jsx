@@ -17,7 +17,7 @@ const Navbar = () => {
   const { viewSidebar, handleSideBar } = useStateContext();
 
   return (
-    <div className="bg-sky-800 px-64 h-24 / flex 2xl:justify-between justify-center items-center">
+    <div id="nav" className="bg-sky-800 px-64 h-24 / flex 2xl:justify-between justify-center items-center">
       {/* MENU ICON */}
       <div className="absolute left-10 2xl:hidden">
         <BiMenu
