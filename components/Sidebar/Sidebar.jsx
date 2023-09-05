@@ -1,6 +1,8 @@
 "use client";
 
 import "./Sidebar.scss";
+import { SideLink } from "..";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
@@ -51,58 +53,9 @@ const Sidebar = () => {
       </div>
 
       {/* LINKS */}
-      <motion.nav initial={false} className="menu mt-8">
-        {navigationLinks.map((link) => (
-          <div key={link.title} className="group my-4">
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={() => toggleLink(link.title)}
-              className="flex items-center justify-between"
-            >
-              <h1 className="text-white mr-4 cursor-pointer">{link.title}</h1>
-              {link.links && (
-                <BiSolidDownArrow color="white" className="cursor-pointer" />
-              )}
-            </motion.button>
-            {link.links && (
-              <motion.ul
-                animate={openLinks[link.title] ? "open" : "closed"}
-                variants={{
-                  open: {
-                    clipPath: "inset(0% 0% 0% 0% round 10px)",
-                    transition: {
-                      type: "spring",
-                      bounce: 0,
-                      duration: 0.7,
-                      delayChildren: 0.3,
-                      staggerChildren: 0.05,
-                    },
-                  },
-                  closed: {
-                    clipPath: "inset(10% 50% 90% 50% round 10px)",
-                    transition: {
-                      type: "spring",
-                      bounce: 0,
-                      duration: 0.3,
-                    },
-                  },
-                }}
-                className={`p-2 rounded ${openLinks[link.title] ? 'block' : 'hidden'}`} // Use CSS display property
-              >
-                {link.links.map((item) => (
-                  <motion.li
-                    variants={itemVariants}
-                    key={item.title}
-                    className="p-2 text-white text-sm cursor-pointer rounded hover:bg-white hover:text-sky-800 transition-all ease-in-out"
-                  >
-                    {item.title}
-                  </motion.li>
-                ))}
-              </motion.ul>
-            )}
-          </div>
-        ))}
-      </motion.nav>
+      <div>
+        <SideLink />
+      </div>
 
       {/* SEARCH FORM    */}
       <div className="flex mt-6 items-center bg-white p-2 rounded">
