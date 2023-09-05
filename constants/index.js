@@ -1,6 +1,6 @@
 export const navigationLinks = [
   {
-    title: "SERVICES AND SOLUTIONS",
+    title: "SOLUTIONS",
     links: [
       { title: "Investment Funds Record Keeping", url: "/" },
       { title: "Business Process Services", url: "/" },
@@ -9,7 +9,7 @@ export const navigationLinks = [
     ],
   },
   {
-    title: "WHO WE ARE",
+    title: "ABOUT",
     links: [
       { title: "About us", url: "/" },
       { title: "Leadership Team", url: "/" },
@@ -25,7 +25,7 @@ export const navigationLinks = [
     title: "CAREERS",
   },
   {
-    title: "CONTACT US",
+    title: "CONTACT",
     links: [
       { title: "Canada", url: "/" },
       { title: "Ireland", url: "/" },
