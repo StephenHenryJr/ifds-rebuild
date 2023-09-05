@@ -82,9 +82,9 @@ const HomePage = () => {
         </p>
       </div>
 
-      {/* SLIDING DIV'S */}
+      {/* Country Cards */}
       <motion.div
-        className="2xl:px-64 px-12 pb-12  / xl:flex justify-between  gap-4"
+        className="2xl:px-64 px-12 pb-12 my-12  / xl:flex justify-between  gap-4"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
