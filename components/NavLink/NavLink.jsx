@@ -60,7 +60,7 @@ const NavLink = () => {
                   },
                 },
               }}
-              className="bg-sky-800 w-max p-2 mt-1 rounded-b-md absolute top-full left-0 z-40"
+              className="bg-sky-800 w-max p-2 mt-1 absolute top-full left-0  z-40"
             >
               {link.links.map((item) => (
                 <motion.li
