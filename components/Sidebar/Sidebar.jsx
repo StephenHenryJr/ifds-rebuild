@@ -66,7 +66,7 @@ const Sidebar = () => {
       </div>
 
       {/* CLIENT LOGIN */}
-      <div className="hover:text-gray-300 text-white cursor-pointer absolute left-4 bottom-2">
+      <div className="hover:text-gray-300 text-white cursor-pointer absolute left-4 bottom-8">
           <a href="https://ifdsgroup.service-now.com/IFDS_Portal/">Client Login</a>
       </div>
 

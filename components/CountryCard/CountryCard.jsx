@@ -7,7 +7,7 @@ const CountryCard = ({ country, description, imageURL, flag }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.99 }}
-      className="relative mb-12 flex items-center justify-center min-w-[450px] h-[500px] rounded-[24px] cursor-pointer shadow-gray-900 shadow-xl "
+      className="relative mb-12 flex items-center justify-center min-w-[450px] h-[500px] rounded-[24px] cursor-pointer shadow-gray-900 shadow-lg "
     >
       <Image
         src={imageURL}

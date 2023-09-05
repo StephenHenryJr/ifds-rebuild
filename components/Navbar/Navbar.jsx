@@ -1,11 +1,11 @@
 "use client";
 import "./Navbar.scss";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-import { Sidebar } from "@/components";
+import { Sidebar, NavLink } from "@/components";
 
 import { BsSearch } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
@@ -34,29 +34,7 @@ const Navbar = () => {
 
       {/* LINKS */}
       <div className="2xl:flex hidden h-full">
-        {navigationLinks.map((link) => (
-          <div
-            className="group text-white  cursor-pointer px-6 h-full flex flex-col justify-center relative"
-            key={link.title}
-          >
-            <div className="flex-col flex items-center">
-              <div className="group-hover:bg-white w-2 h-2 rounded-full mb-2" />
-              {link.title}
-            </div>
-            {link.links && (
-              <div className="group-hover:block hidden bg-sky-800 w-max p-2 rounded-b-md / absolute top-full left-0 / border-t-4 border-transparent group-hover:border-white transition-all duration-300 z-40">
-                {link.links.map((item) => (
-                  <li
-                    key={item}
-                    className="p-2 text-md rounded / hover:bg-white hover:text-sky-800"
-                  >
-                    {item.title}
-                  </li>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+        <NavLink />
       </div>
 
       {/* SEARCH FORM    */}

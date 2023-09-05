@@ -1,4 +1,5 @@
 import Navbar from "./Navbar/Navbar";
+import NavLink from "./NavLink/NavLink";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
 import HomePage from "./HomePage/HomePage";
@@ -9,6 +10,7 @@ import CountryCard from "./CountryCard/CountryCard";
 
 export { 
     Navbar, 
+    NavLink,
     Sidebar,
     Footer,
     HomePage,
