@@ -24,7 +24,7 @@ const HomePage = () => {
             <div className="flex items-center cursor-pointer">
               <span className="text-xl mr-2 ">Explore Our Expertise</span>
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <BsFillArrowRightSquareFill size={20} />
+                <BsFillArrowRightSquareFill size={25} />
               </motion.div>
             </div>
           </div>
@@ -84,13 +84,31 @@ const HomePage = () => {
 
       {/* SLIDING DIV'S */}
       <motion.div
-        className="2xl:px-64 px-12 pb-12 / xl:flex  gap-4"
+        className="2xl:px-64 px-12 pb-12  / xl:flex justify-between  gap-4"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <CountryCard />
+        <CountryCard
+          country="IFDS CANADA"
+          description="We assist the world's largest financial institutions with
+          comprehensive record-keeping and transfer agency solutions"
+          imageURL="/card-toronto.png"
+          flag="/canada.png"
+        />
+        <CountryCard
+          country="IFDS IRELAND"
+          description="We help asset managers, platform providers and insurance companies maximize their business performance."
+          imageURL="/card-ireland.png"
+          flag="/ireland.png"
+        />
+        <CountryCard
+          country="IFDS LUXEMBOURG"
+          description=" We provide distribution support and administrative capabilities to fund managers across Europe and beyond."
+          imageURL="/card-luxembourg.png"
+          flag="/luxembourg.png"
+        />
       </motion.div>
     </div>
   );
