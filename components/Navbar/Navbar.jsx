@@ -2,15 +2,13 @@
 import "./Navbar.scss";
 
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
+
 
 import { Sidebar, NavLink } from "@/components";
 
 import { BsSearch } from "react-icons/bs";
 import { BiMenu } from "react-icons/bi";
 
-import { navigationLinks } from "@/constants";
 import { useStateContext } from "@/contexts/ContextProvider";
 
 const Navbar = () => {
