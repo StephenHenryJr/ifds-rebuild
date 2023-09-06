@@ -7,7 +7,7 @@ const CountryCard = ({ country, description, imageURL, flag }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.99 }}
-      className="relative mb-12 flex items-center justify-center min-w-[450px] h-[500px] rounded-[24px] cursor-pointer shadow-gray-900 shadow-lg "
+      className="relative mb-12 flex items-center justify-center xl:w-[450px] h-[400px] rounded-[24px] cursor-pointer shadow-gray-900 shadow-lg "
     >
       <Image
         src={imageURL}
@@ -20,16 +20,16 @@ const CountryCard = ({ country, description, imageURL, flag }) => {
           {description}
         </p>
         <div className="flex items-center">
-          <h2 className="mr-4 font-semibold sm:text-[32px] text-[24px] text-white">
-            {country}
-          </h2>
           <Image
             src={flag}
             alt="headset"
-            className="object-contain"
+            className="object-contain mr-4"
             width={40}
             height={40}
           />
+          <h2 className="font-semibold sm:text-[32px] text-[24px] text-white">
+            {country}
+          </h2>
         </div>
       </div>
     </motion.div>

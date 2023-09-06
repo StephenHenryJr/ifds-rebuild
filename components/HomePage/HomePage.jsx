@@ -1,7 +1,7 @@
 "use client";
 
 import "./HomePage.scss";
-import { Statistics, Card, CountryCard } from "..";
+import { Statistics, CountryCard, InsightCard } from "..";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -12,8 +12,8 @@ const HomePage = () => {
   return (
     <div>
       {/* HERO IMAGE */}
-      <div className="h-content">
-        <div className="w-full relative p-12 mt-24 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 xl:mt-0">
+      <div className="min-h-screen flex flex-col justify-center">
+        <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 lg:mt-36">
           <div className="text-sky-800 xl:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
               Unlocking Financial Potential Worldwide
@@ -37,7 +37,7 @@ const HomePage = () => {
               width={500}
               height={500}
               layout="responsive"
-              alt="Man Looking outside office window"
+              alt="AI robotic women's head"
             />
           </div>
         </div>
@@ -53,6 +53,14 @@ const HomePage = () => {
           <Statistics number="25%" stat="Staff has 10+ year tenure" />
           <Statistics number="18.3M" stat="Active Fund Accounts" />
         </motion.div>
+      </div>
+
+      {/* Innovative Approach to Service Excellence */}
+      <div className="2xl:px-64 p-12">
+        <h1 className="text-4xl text-sky-800 border-b-2 pb-2 mb-4">Innovative Approach to Service Excellence</h1>
+        <div className="flex flex-col gap-[30px] mt-24">
+          <InsightCard />
+        </div>
       </div>
 
       {/* CONTENT */}
@@ -84,7 +92,7 @@ const HomePage = () => {
 
       {/* Country Cards */}
       <motion.div
-        className="2xl:px-64 px-12 pb-12 my-12  / xl:flex justify-between  gap-4"
+        className="2xl:px-64 px-12 pb-12 my-12  / xl:flex justify-between gap-4"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -110,6 +118,7 @@ const HomePage = () => {
           flag="/luxembourg.png"
         />
       </motion.div>
+
     </div>
   );
 };

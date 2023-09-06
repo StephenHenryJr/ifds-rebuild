@@ -65,7 +65,7 @@ const SideLink = () => {
                     },
                   },
                 }}
-                className={`p-2 rounded ${
+                className={`p-2 rounded bg-white mt-4 ${
                   openLinks[link.title] ? "block" : "hidden"
                 }`} // Use CSS display property
               >
@@ -73,7 +73,7 @@ const SideLink = () => {
                   <motion.li
                     variants={itemVariants}
                     key={item.title}
-                    className="p-2 text-white text-sm cursor-pointer rounded hover:bg-white hover:text-sky-800 transition-all ease-in-out"
+                    className="p-2 text-sky-800 text-md cursor-pointer rounded hover:bg-sky-800 hover:text-white transition-all ease-in-out"
                   >
                     {item.title}
                   </motion.li>
