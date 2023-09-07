@@ -12,24 +12,24 @@ const HomePage = () => {
   return (
     <div>
       {/* HERO IMAGE */}
-      <div className="min-h-screen flex flex-col justify-center">
+      <div className="hero min-h-screen flex flex-col justify-center">
         <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 lg:mt-36">
           <div className="text-sky-800 xl:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
               Unlocking Financial Potential Worldwide
             </h1>
-            <h2 className="text-4xl my-5">
+            <h2 className="text-4xl my-5 text-gray-400">
               Your Trusted Partner for Global Financial Solutions
             </h2>
             <div className="flex items-center cursor-pointer">
-              <span className="text-xl mr-2 ">Explore Our Expertise</span>
+              <span className="text-2xl mr-2 ">Explore Our Expertise</span>
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <BsFillArrowRightSquareFill size={25} />
               </motion.div>
             </div>
           </div>
           <div
-            className="hero image w-1/2 flex justify-center"
+            className="image w-1/2 flex justify-center"
             style={{ maxWidth: "100%", width: "500px" }}
           >
             <Image
@@ -57,18 +57,34 @@ const HomePage = () => {
 
       {/* Innovative Approach to Service Excellence */}
       <div className="2xl:px-64 p-12">
-        <h1 className="text-4xl text-sky-800 border-b-2 pb-2 mb-4">Innovative Approach to Service Excellence</h1>
+        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
+          Innovative Approach to Service Excellence
+        </h1>
         <div className="flex flex-col gap-[30px] mt-24">
-          <InsightCard />
+          <InsightCard
+            title="Global Perspective"
+            subtitle="We offer a global perspective with local expertise. Our solutions are designed to transcend borders while addressing the unique needs of each local market."
+            imgUrl="/global.png"
+          />
+          <InsightCard
+            title="Client Centred Service"
+            subtitle="your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
+            imgUrl="/customerservice.png"
+          />
+          <InsightCard
+            title="Continuous Research & Development"
+            subtitle="innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
+            imgUrl="/research.png"
+          />
         </div>
       </div>
 
       {/* CONTENT */}
       <div className="2xl:px-64 p-12">
-        <h1 className="text-4xl text-sky-800 border-b-2 pb-2 mb-4">
+        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
           Trusted by the world’s largest financial institutions
         </h1>
-        <p className="text-lg">
+        <p className="text-lg text-gray-500">
           With its global headquarters in Toronto, Canada, and offices in
           Ireland and Luxembourg, International Financial Data Services (IFDS)
           is a world-leading provider of outsourcing and technology solutions to
@@ -118,7 +134,6 @@ const HomePage = () => {
           flag="/luxembourg.png"
         />
       </motion.div>
-
     </div>
   );
 };

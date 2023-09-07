@@ -10,3 +10,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.sky-gradient {
+  @apply bg-gradient-to-r from-sky-700 via-sky-600 to-sky-500 bg-clip-text text-transparent;
+}
