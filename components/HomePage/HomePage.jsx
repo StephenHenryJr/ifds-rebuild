@@ -29,7 +29,7 @@ const HomePage = () => {
   return (
     <div>
       {/* HERO */}
-      <div className="hero relative min-h-screen flex flex-col justify-center">
+      <div id="hero" className="relative min-h-screen flex flex-col justify-center">
         <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 lg:mt-36">
           <div className="text-sky-800 xl:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">

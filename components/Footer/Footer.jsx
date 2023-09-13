@@ -50,7 +50,7 @@ const Footer = () => {
         Luxembourg B81997
       </p>
 
-      <a href="#nav" className="flex flex-col items-center mt-6  cursor-pointer ">
+      <a href="#hero" className="flex flex-col items-center mt-6  cursor-pointer ">
         <TbSquareRoundedChevronUpFilled color="white" size={25}/>
         <h1 className="text-white text-base mt-1">Scroll to top</h1>
       </a>
