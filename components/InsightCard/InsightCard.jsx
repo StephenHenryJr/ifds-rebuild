@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
+
+const item = {
+  hidden: { x: 0 },
+  show: { x: 100, transition: { duration: 1 } },
+};
+
 const InsightCard = ({ imgUrl, title, subtitle }) => (
   <motion.div
     className="flex md:flex-row flex-col gap-4"
@@ -24,9 +30,15 @@ const InsightCard = ({ imgUrl, title, subtitle }) => (
         </p>
       </div>
 
-      <motion.div whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.99 }} className="lg:flex hidden items-center justify-center">
-        <BsArrowUpRightSquare size={250} className="w-[40%] h-[40%] object-contain cursor-pointer text-sky-800" />
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.99 }}
+        className="lg:flex hidden items-center justify-center"
+      >
+        <BsArrowUpRightSquare
+          size={250}
+          className="w-[40%] h-[40%] object-contain cursor-pointer text-sky-800"
+        />
       </motion.div>
     </div>
   </motion.div>

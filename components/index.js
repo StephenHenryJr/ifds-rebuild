@@ -8,6 +8,7 @@ import Statistics from "./Statistics/Statistics";
 import Card from "./Card/Card";
 import CountryCard from "./CountryCard/CountryCard";
 import InsightCard from "./InsightCard/InsightCard";
+import AnimatedBackground from "./AnimatedBackground/AnimatedBackground";
 
 
 export { 
@@ -21,4 +22,5 @@ export {
     Card,
     CountryCard,
     InsightCard,
+    AnimatedBackground,
 };

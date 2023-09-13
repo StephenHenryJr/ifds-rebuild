@@ -8,11 +8,21 @@ import { motion } from "framer-motion";
 
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
+const list = {
+  visible: { opacity: 1, transition: { staggerChildren: 1 } },
+  hidden: { opacity: 0 },
+};
+
+const item = {
+  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -100 },
+};
+
 const HomePage = () => {
   return (
     <div>
-      {/* HERO IMAGE */}
-      <div className="hero min-h-screen flex flex-col justify-center">
+      {/* HERO */}
+      <div className="hero relative min-h-screen flex flex-col justify-center">
         <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 lg:mt-36">
           <div className="text-sky-800 xl:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
@@ -57,26 +67,38 @@ const HomePage = () => {
 
       {/* Innovative Approach to Service Excellence */}
       <div className="2xl:px-64 p-12">
+
         <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
           Innovative Approach to Service Excellence
         </h1>
-        <div className="flex flex-col gap-[30px] mt-24">
-          <InsightCard
-            title="Global Perspective"
-            subtitle="We offer a global perspective with local expertise. Our solutions are designed to transcend borders while addressing the unique needs of each local market."
-            imgUrl="/global.png"
-          />
-          <InsightCard
-            title="Client Centred Service"
-            subtitle="your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
-            imgUrl="/customerservice.png"
-          />
-          <InsightCard
-            title="Continuous Research & Development"
-            subtitle="innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
-            imgUrl="/research.png"
-          />
-        </div>
+
+        <motion.div 
+        initial="hidden" 
+        whileInView="visible" 
+        variants={list}
+        className="flex flex-col gap-[30px] mt-24">
+          <motion.div variants={item}>
+            <InsightCard
+              title="Global Perspective"
+              subtitle="We offer a global perspective with local expertise. Our solutions are designed to transcend borders while addressing the unique needs of each local market."
+              imgUrl="/global.png"
+            />
+          </motion.div>
+          <motion.div variants={item}>
+            <InsightCard
+              title="Client Centred Service"
+              subtitle="your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
+              imgUrl="/customerservice.png"
+            />
+          </motion.div>
+          <motion.div variants={item}>
+            <InsightCard
+              title="Continuous Research & Development"
+              subtitle="innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
+              imgUrl="/research.png"
+            />
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* CONTENT */}

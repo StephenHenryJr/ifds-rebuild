@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     
     <html lang="en">
       <ContextProvider>
-        <body className="relative">
+        <body className="relative bg-white">
           <Navbar />
           {children}
           <Footer />
