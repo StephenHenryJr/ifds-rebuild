@@ -5,17 +5,24 @@ import { Statistics, CountryCard, InsightCard } from "..";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
-const list = {
-  visible: { opacity: 1, transition: { delayChildren: 0.1, staggerChildren: 0.5},},
+const container = {
+  visible: {
+    opacity: 1,
+    transition: { delayChildren: 0.1, staggerChildren: 0.3 },
+  },
   hidden: { opacity: 0 },
 };
 
-const item = {
-  visible: { opacity: 1, x: 0 , transition: {duration: 1} },
+const insight = {
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   hidden: { opacity: 0, x: -100 },
+};
+
+const country = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 100 },
 };
 
 const HomePage = () => {
@@ -67,32 +74,32 @@ const HomePage = () => {
 
       {/* Innovative Approach to Service Excellence */}
       <div className="2xl:px-64 p-12">
-
         <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
           Innovative Approach to Service Excellence
         </h1>
 
-        <motion.div 
-        initial="hidden" 
-        whileInView="visible" 
-        viewport={{ once: true }}
-        variants={list}
-        className="flex flex-col gap-[30px] mt-24">
-          <motion.div variants={item}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={container}
+          className="flex flex-col gap-[30px] mt-24"
+        >
+          <motion.div variants={insight}>
             <InsightCard
               title="Global Perspective"
               subtitle="We offer a global perspective with local expertise. Our solutions are designed to transcend borders while addressing the unique needs of each local market."
               imgUrl="/global.png"
             />
           </motion.div>
-          <motion.div variants={item}>
+          <motion.div variants={insight}>
             <InsightCard
               title="Client Centred Service"
               subtitle="your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
               imgUrl="/customerservice.png"
             />
           </motion.div>
-          <motion.div variants={item}>
+          <motion.div variants={insight}>
             <InsightCard
               title="Continuous Research & Development"
               subtitle="innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
@@ -132,30 +139,40 @@ const HomePage = () => {
       {/* Country Cards */}
       <motion.div
         className="2xl:px-64 px-12 my-12  / xl:flex justify-between gap-4"
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        // initial={{ y: 100, opacity: 0 }}
+        // whileInView={{ y: 0, opacity: 1 }}
+        // transition={{ duration: 1 }}
+        // viewport={{ once: true }}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
+        variants={container}
       >
-        <CountryCard
-          country="IFDS CANADA"
-          description="We assist the world's largest financial institutions with
+        <motion.div variants={country}>
+          <CountryCard
+            country="IFDS CANADA"
+            description="We assist the world's largest financial institutions with
           comprehensive record-keeping and transfer agency solutions"
-          imageURL="/card-toronto.png"
-          flag="/canada.png"
-        />
-        <CountryCard
-          country="IFDS IRELAND"
-          description="We help asset managers, platform providers and insurance companies maximize their business performance."
-          imageURL="/card-ireland.png"
-          flag="/ireland.png"
-        />
-        <CountryCard
-          country="IFDS LUXEMBOURG"
-          description=" We provide distribution support and administrative capabilities to fund managers across Europe and beyond."
-          imageURL="/card-luxembourg.png"
-          flag="/luxembourg.png"
-        />
+            imageURL="/card-toronto.png"
+            flag="/canada.png"
+          />
+        </motion.div>
+        <motion.div variants={country}>
+          <CountryCard
+            country="IFDS IRELAND"
+            description="We help asset managers, platform providers and insurance companies maximize their business performance."
+            imageURL="/card-ireland.png"
+            flag="/ireland.png"
+          />
+        </motion.div>
+        <motion.div variants={country}>
+          <CountryCard
+            country="IFDS LUXEMBOURG"
+            description=" We provide distribution support and administrative capabilities to fund managers across Europe and beyond."
+            imageURL="/card-luxembourg.png"
+            flag="/luxembourg.png"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
