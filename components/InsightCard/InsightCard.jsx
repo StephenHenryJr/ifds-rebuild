@@ -5,12 +5,6 @@ import { motion } from "framer-motion";
 
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
-
-const item = {
-  hidden: { x: 0 },
-  show: { x: 100, transition: { duration: 1 } },
-};
-
 const InsightCard = ({ imgUrl, title, subtitle }) => (
   <motion.div
     className="flex md:flex-row flex-col gap-4"

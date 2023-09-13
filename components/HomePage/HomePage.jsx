@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 const list = {
-  visible: { opacity: 1, transition: { staggerChildren: 1 } },
+  visible: { opacity: 1, transition: { delayChildren: 0.1, staggerChildren: 0.5},},
   hidden: { opacity: 0 },
 };
 
 const item = {
-  visible: { opacity: 1, x: 0 },
+  visible: { opacity: 1, x: 0 , transition: {duration: 1} },
   hidden: { opacity: 0, x: -100 },
 };
 
@@ -75,6 +75,7 @@ const HomePage = () => {
         <motion.div 
         initial="hidden" 
         whileInView="visible" 
+        viewport={{ once: true }}
         variants={list}
         className="flex flex-col gap-[30px] mt-24">
           <motion.div variants={item}>
