@@ -23,7 +23,7 @@ const NavLink = () => {
   };
 
   return (
-    <nav className="menu 2xl:flex hidden h-full w-full justify-center">
+    <nav className="menu flex h-full w-full justify-center">
       {navigationLinks.map((link) => (
         <div
           className="group text-white cursor-pointer px-6 h-full flex flex-col justify-center relative"
