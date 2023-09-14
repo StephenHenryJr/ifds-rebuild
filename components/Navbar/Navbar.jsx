@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
 
       {/* LOGO  */}
-      <div className="relative min-w-[250px] md:min-w-[300px] h-[50px]  cursor-pointer">
+      <div className="relative min-w-[200px]  sm:min-w-[250px] md:min-w-[300px] h-[50px]  cursor-pointer">
         <Image src="/ifds-logo.webp" width={300} height={300} layout="responsive" alt="IFDS Logo" className="absolute w-full h-full object-cover"/>
       </div>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
 
       {/* CLIENT LOGIN */}
-      <div className="hover:text-gray-300 text-white cursor-pointer absolute right-8 top-2 hidden 2xl:block">
+      <div className="hover:text-gray-300 text-white cursor-pointer absolute right-8 top-2 hidden lg:block">
         <a href="https://ifdsgroup.service-now.com/IFDS_Portal/">
           Client Login
         </a>
