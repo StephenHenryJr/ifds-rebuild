@@ -60,15 +60,15 @@ const HomePage = () => {
         </div>
 
         <motion.div
-          className="w-full h-fit px-12 sm:px-24 2xl:px-64 m-4 lg:m-0 uppercase / flex justify-between"
+          className="w-full h-fit px-12 sm:px-24 2xl:px-64 mt-12 uppercase / flex justify-between"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <Statistics number="1,700+" stat="Staff and partners worldwide" />
-          <Statistics number="25%" stat="Staff has 10+ year tenure" />
-          <Statistics number="18.3M" stat="Active Fund Accounts" />
+          <Statistics number="1,700+" stat="Staff & partners worldwide" />
+          <Statistics number="25%" stat="10+ year tenured staff" />
+          <Statistics number="18.3M" stat="Active Accounts" />
         </motion.div>
       </div>
 
