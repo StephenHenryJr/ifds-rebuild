@@ -30,8 +30,8 @@ const HomePage = () => {
     <div>
       {/* HERO */}
       <div id="hero" className="relative min-h-screen flex flex-col justify-center">
-        <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-36 lg:mt-36">
-          <div className="text-sky-800 xl:w-1/2 mb-12">
+        <div className="w-full relative px-12 sm:px-24 2xl:px-64 mt-48 lg:mt-36 / flex flex-col lg:flex-row items-center justify-between">
+          <div className="text-sky-800 lg:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
               Unlocking Financial Potential Worldwide
             </h1>
@@ -60,7 +60,7 @@ const HomePage = () => {
         </div>
 
         <motion.div
-          className="w-full h-fit p-12 m-4 uppercase / flex justify-between / 2xl:px-36 lg:m-0"
+          className="w-full h-fit px-12 sm:px-24 2xl:px-64 m-4 lg:m-0 uppercase / flex justify-between"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -73,8 +73,8 @@ const HomePage = () => {
       </div>
 
       {/* Innovative Approach to Service Excellence */}
-      <div className="2xl:px-36 p-12">
-        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
+      <div className="px-12 sm:px-24 2xl:px-64 py-12">
+        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-12">
           Innovative Approach to Service Excellence
         </h1>
 
@@ -83,7 +83,7 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={container}
-          className="flex flex-col gap-[30px] mt-24"
+          className="flex flex-col gap-[30px]"
         >
           <motion.div variants={insight}>
             <InsightCard
@@ -110,8 +110,8 @@ const HomePage = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="2xl:px-36 p-12">
-        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
+      <div className="px-12 sm:px-24 2xl:px-64 py-12">
+        <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-12">
           Trusted by the world’s largest financial institutions
         </h1>
         <p className="text-lg text-gray-500">
@@ -138,11 +138,7 @@ const HomePage = () => {
 
       {/* Country Cards */}
       <motion.div
-        className="2xl:px-36 px-12 my-12  / xl:flex justify-between gap-4"
-        // initial={{ y: 100, opacity: 0 }}
-        // whileInView={{ y: 0, opacity: 1 }}
-        // transition={{ duration: 1 }}
-        // viewport={{ once: true }}
+        className="px-12 sm:px-24 2xl:px-64 my-12  / xl:flex justify-between gap-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
