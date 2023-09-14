@@ -10,7 +10,7 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div className="w-full text-xl bg-sky-800 2xl:px-64 p-12  py-12">
+    <div className="w-full text-xl bg-sky-800 2xl:px-36 p-12  py-12">
       <div className="2xl:flex flex-wrap justify-between text-white m-auto">
         {footerLinks.map((link) => (
           <div key={link.title}>

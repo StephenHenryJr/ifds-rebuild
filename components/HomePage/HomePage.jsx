@@ -30,7 +30,7 @@ const HomePage = () => {
     <div>
       {/* HERO */}
       <div id="hero" className="relative min-h-screen flex flex-col justify-center">
-        <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-64 lg:mt-36">
+        <div className="w-full relative px-12 mt-48 / flex flex-col items-center justify-between / lg:flex-row 2xl:px-36 lg:mt-36">
           <div className="text-sky-800 xl:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
               Unlocking Financial Potential Worldwide
@@ -60,7 +60,7 @@ const HomePage = () => {
         </div>
 
         <motion.div
-          className="w-full h-fit p-12 m-4 uppercase / flex justify-between / 2xl:px-64 lg:m-0"
+          className="w-full h-fit p-12 m-4 uppercase / flex justify-between / 2xl:px-36 lg:m-0"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -73,7 +73,7 @@ const HomePage = () => {
       </div>
 
       {/* Innovative Approach to Service Excellence */}
-      <div className="2xl:px-64 p-12">
+      <div className="2xl:px-36 p-12">
         <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
           Innovative Approach to Service Excellence
         </h1>
@@ -110,7 +110,7 @@ const HomePage = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="2xl:px-64 p-12">
+      <div className="2xl:px-36 p-12">
         <h1 className="text-5xl font-bold text-sky-800 border-b-2 pb-2 mb-4">
           Trusted by the world’s largest financial institutions
         </h1>
@@ -138,7 +138,7 @@ const HomePage = () => {
 
       {/* Country Cards */}
       <motion.div
-        className="2xl:px-64 px-12 my-12  / xl:flex justify-between gap-4"
+        className="2xl:px-36 px-12 my-12  / xl:flex justify-between gap-4"
         // initial={{ y: 100, opacity: 0 }}
         // whileInView={{ y: 0, opacity: 1 }}
         // transition={{ duration: 1 }}

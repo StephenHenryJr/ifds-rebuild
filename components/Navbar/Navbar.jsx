@@ -15,7 +15,7 @@ const Navbar = () => {
   const { viewSidebar, handleSideBar } = useStateContext();
 
   return (
-    <div id="nav" className="fixed w-full bg-sky-800 px-64 h-24 / flex 2xl:justify-between justify-center items-center z-40">
+    <div id="nav" className="fixed w-full bg-sky-800 px-36 h-24 / flex 2xl:justify-between justify-center items-center z-40">
       {/* MENU ICON */}
       <div className="absolute left-10 2xl:hidden">
         <BiMenu
@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
 
       {/* LINKS */}
-      <div className="2xl:flex hidden h-full">
+      <div>
         <NavLink />
       </div>
 

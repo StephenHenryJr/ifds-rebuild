@@ -23,7 +23,7 @@ const NavLink = () => {
   };
 
   return (
-    <nav className="menu 2xl:flex hidden h-full">
+    <nav className="menu 2xl:flex hidden h-full w-full justify-center">
       {navigationLinks.map((link) => (
         <div
           className="group text-white cursor-pointer px-6 h-full flex flex-col justify-center relative"
@@ -60,7 +60,7 @@ const NavLink = () => {
                   },
                 },
               }}
-              className="bg-sky-800 w-max p-2 mt-1 absolute top-full left-0  z-40"
+              className="bg-sky-800 w-max p-2 absolute top-[70px] left-0  z-40"
             >
               {link.links.map((item) => (
                 <motion.li
