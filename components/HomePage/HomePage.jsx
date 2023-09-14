@@ -95,14 +95,14 @@ const HomePage = () => {
           <motion.div variants={insight}>
             <InsightCard
               title="Client Centred Service"
-              subtitle="your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
+              subtitle="Your satisfaction is our mission. We're dedicated to understanding and meeting your unique needs, providing personalized service that exceeds expectations."
               imgUrl="/customerservice.png"
             />
           </motion.div>
           <motion.div variants={insight}>
             <InsightCard
               title="Continuous Research & Development"
-              subtitle="innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
+              subtitle="Innovation never stops. Our commitment to continuous research and development ensures that we're always at the forefront of industry advancements, delivering cutting-edge solutions that drive your success."
               imgUrl="/research.png"
             />
           </motion.div>
