@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
 
       {/* LOGO  */}
-      <div className="relative min-w-[300px] h-[50px]  cursor-pointer">
+      <div className="relative min-w-[250px] md:min-w-[300px] h-[50px]  cursor-pointer">
         <Image src="/ifds-logo.webp" width={300} height={300} layout="responsive" alt="IFDS Logo" className="absolute w-full h-full object-cover"/>
       </div>
 

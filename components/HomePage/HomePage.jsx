@@ -138,7 +138,7 @@ const HomePage = () => {
 
       {/* Country Cards */}
       <motion.div
-        className="px-12 sm:px-24 2xl:px-64 my-12  / xl:flex justify-between gap-4"
+        className="px-12 sm:px-24 2xl:px-64   / xl:flex justify-between gap-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
