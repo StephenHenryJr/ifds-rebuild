@@ -23,7 +23,7 @@ const CountryCard = ({ country, description, imageURL, flag }) => {
           <Image
             src={flag}
             alt="headset"
-            className="object-contain mr-4"
+            className="object-contain mr-1"
             width={40}
             height={40}
           />
