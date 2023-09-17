@@ -30,7 +30,7 @@ const HomePage = () => {
     <div>
       {/* HERO */}
       <div id="hero" className="relative min-h-screen flex flex-col justify-center">
-        <div className="w-full relative px-12 sm:px-24 2xl:px-64 mt-48 lg:mt-36 / flex flex-col lg:flex-row items-center justify-between">
+        <div className="w-full relative px-12 sm:px-24 2xl:px-64 mt-36 lg:mt-24 / flex flex-col lg:flex-row items-center justify-between">
           <div className="text-sky-800 lg:w-1/2 mb-12">
             <h1 className="text-6xl font-bold tracking-wider">
               Unlocking Financial Potential Worldwide
@@ -60,7 +60,7 @@ const HomePage = () => {
         </div>
 
         <motion.div
-          className="w-full h-fit px-12 sm:px-24 2xl:px-64 mt-12 uppercase / flex justify-between"
+          className="w-full h-fit px-12 sm:px-24 2xl:px-64 mt-8 uppercase / flex  flex-col md:flex-row  justify-between"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
